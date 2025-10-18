@@ -12,8 +12,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <FeaturesSection />
         <StyleGallery />
+        <FeaturesSection />
         <AppShowcase />
         <CTASection />
       </main>
