@@ -57,19 +57,22 @@ export default function BeforeAfterSlider() {
               <img 
                 src={afterImage}
                 alt="After - Banana Costume"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 data-testid="img-after"
               />
               
               <div 
-                className="absolute inset-0 overflow-hidden"
+                className="absolute top-0 left-0 bottom-0 overflow-hidden pointer-events-none"
                 style={{ width: `${sliderPosition}%` }}
               >
                 <img 
                   src={beforeImage}
                   alt="Before - Original Photo"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ width: `${(100 / sliderPosition) * 100}%` }}
+                  className="absolute top-0 left-0 h-full object-cover"
+                  style={{ 
+                    width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100%',
+                    maxWidth: 'none'
+                  }}
                   data-testid="img-before"
                 />
               </div>
