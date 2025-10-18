@@ -1,19 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import puppyImage from "@assets/generated_images/Holding_puppy_AI_transformation_aaa6774b.png";
-import retroImage from "@assets/generated_images/90s_camera_filter_transformation_76a53cf5.png";
-import headshotImage from "@assets/generated_images/Professional_headshot_AI_transformation_78c54c36.png";
-import hairImage from "@assets/generated_images/Long_hair_transformation_d7424b7f.png";
+import longHairImage from "@assets/make_him_have_extremely_long_hair_drpz1a5mu4epipwsy6mi_0_1760813443336.png";
+import baldImage from "@assets/make_him_bald_mn74pb9exr3gz9kdhve6_0_1760813443337.png";
+import babyImage from "@assets/make_him_holds_a_baby_s14ucjburmdhyrh0b6g8_1_1760813443337.png";
+import bananaImage from "@assets/make_him_wear_a_banana_costume_bzx52dpudiu25qa0pijf_0_1760813443337.png";
+import puppyImage from "@assets/make_him_hold_a_puppy_mm1wbhsa763nj4fgwprb_0_1760813443337.png";
 
 const styles = [
-  { id: 1, name: "Holding Puppy", image: puppyImage, category: "Fun" },
-  { id: 2, name: "90s Retro Cam", image: retroImage, category: "Vintage" },
-  { id: 3, name: "Professional", image: headshotImage, category: "Business" },
-  { id: 4, name: "Long Hair", image: hairImage, category: "Glamour" },
-  { id: 5, name: "Bald Hair", image: puppyImage, category: "Fun" },
-  { id: 6, name: "Huge Head", image: retroImage, category: "Comic" },
-  { id: 7, name: "Supermodel", image: headshotImage, category: "Fashion" },
-  { id: 8, name: "Vintage Film", image: hairImage, category: "Vintage" },
+  { id: 1, name: "Long Hair", image: longHairImage, category: "Glamour" },
+  { id: 2, name: "Bald", image: baldImage, category: "Transform" },
+  { id: 3, name: "Holding Baby", image: babyImage, category: "Family" },
+  { id: 4, name: "Banana Costume", image: bananaImage, category: "Fun" },
+  { id: 5, name: "Holding Puppy", image: puppyImage, category: "Cute" },
+  { id: 6, name: "Long Hair", image: longHairImage, category: "Glamour" },
+  { id: 7, name: "Bald", image: baldImage, category: "Transform" },
+  { id: 8, name: "Holding Baby", image: babyImage, category: "Family" },
 ];
 
 export default function StyleGallery() {
