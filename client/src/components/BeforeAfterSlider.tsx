@@ -1,29 +1,11 @@
-import { useState, useEffect, useRef } from "react";
-import beforeImage from "@assets/generated_images/Before_transformation_selfie_photo_b121b6f9.png";
-import puppyImage from "@assets/generated_images/Holding_puppy_AI_transformation_aaa6774b.png";
-import retroImage from "@assets/generated_images/90s_camera_filter_transformation_76a53cf5.png";
-import headshotImage from "@assets/generated_images/Professional_headshot_AI_transformation_78c54c36.png";
-import hairImage from "@assets/generated_images/Long_hair_transformation_d7424b7f.png";
-
-const transformations = [
-  { name: "Holding Puppy", before: beforeImage, after: puppyImage },
-  { name: "90s Retro", before: beforeImage, after: retroImage },
-  { name: "Professional", before: beforeImage, after: headshotImage },
-  { name: "Long Hair", before: beforeImage, after: hairImage },
-];
+import { useState, useRef } from "react";
+import beforeImage from "@assets/make_a_closeup_should_look_like_a_smartphone_photo_gmxgn36btq2f4fm64x7n_0_1760813125130.png";
+import afterImage from "@assets/make_him_wear_a_banana_costume_bzx52dpudiu25qa0pijf_0_1760813125139.png";
 
 export default function BeforeAfterSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % transformations.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleMove = (clientX: number) => {
     if (!containerRef.current) return;
@@ -62,7 +44,7 @@ export default function BeforeAfterSlider() {
             
             <div 
               ref={containerRef}
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-primary shadow-2xl shadow-primary/20 cursor-col-resize select-none"
+              className="relative aspect-[3/4] rounded-2xl overflow-hidden border-2 border-primary shadow-2xl shadow-primary/20 cursor-col-resize select-none"
               onMouseDown={() => setIsDragging(true)}
               onMouseUp={() => setIsDragging(false)}
               onMouseLeave={() => setIsDragging(false)}
@@ -73,8 +55,8 @@ export default function BeforeAfterSlider() {
               data-testid="slider-container"
             >
               <img 
-                src={transformations[currentIndex].after}
-                alt="After"
+                src={afterImage}
+                alt="After - Banana Costume"
                 className="absolute inset-0 w-full h-full object-cover"
                 data-testid="img-after"
               />
@@ -84,8 +66,8 @@ export default function BeforeAfterSlider() {
                 style={{ width: `${sliderPosition}%` }}
               >
                 <img 
-                  src={transformations[currentIndex].before}
-                  alt="Before"
+                  src={beforeImage}
+                  alt="Before - Original Photo"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ width: `${(100 / sliderPosition) * 100}%` }}
                   data-testid="img-before"
@@ -106,22 +88,9 @@ export default function BeforeAfterSlider() {
 
               <div className="absolute bottom-6 left-6 right-6 bg-background/90 backdrop-blur-sm rounded-lg px-6 py-4">
                 <span className="text-base font-medium" data-testid="text-style-name">
-                  {transformations[currentIndex].name}
+                  Banana Costume Transformation
                 </span>
               </div>
-            </div>
-
-            <div className="flex justify-center gap-3">
-              {transformations.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentIndex ? "bg-primary w-10" : "bg-border"
-                  }`}
-                  data-testid={`button-style-${index}`}
-                />
-              ))}
             </div>
           </div>
         </div>
