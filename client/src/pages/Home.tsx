@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import FeaturesSection from "@/components/FeaturesSection";
 import StyleGallery from "@/components/StyleGallery";
-import AppShowcase from "@/components/AppShowcase";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -16,7 +15,6 @@ export default function Home() {
         <BeforeAfterSlider />
         <StyleGallery />
         <FeaturesSection />
-        <AppShowcase />
         <CTASection />
       </main>
       <Footer />
