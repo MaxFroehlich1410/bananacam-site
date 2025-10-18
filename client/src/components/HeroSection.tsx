@@ -1,9 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Apple, Play, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { Apple, Play as PlayIcon, Sparkles } from "lucide-react";
+import { useRef, useState } from "react";
+import bananaVideo from "@assets/BananaCam_1_1760813309089.mp4";
 
 export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayVideo = () => {
+    setIsPlaying(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -31,7 +40,7 @@ export default function HeroSection() {
                 App Store
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 gap-2" data-testid="button-download-android">
-                <Play className="w-5 h-5" />
+                <PlayIcon className="w-5 h-5" />
                 Google Play
               </Button>
             </div>
@@ -51,36 +60,32 @@ export default function HeroSection() {
 
           <div className="relative" data-testid="hero-video-showcase">
             <div className="relative max-w-2xl mx-auto">
-              <div className="aspect-[9/16] rounded-2xl overflow-hidden border-2 border-primary shadow-2xl shadow-primary/20">
-                <div className="relative w-full h-full bg-gradient-to-br from-card to-background">
-                  {!isPlaying ? (
-                    <div className="absolute inset-0 flex items-center justify-center">
+              <div className="aspect-[9/16] rounded-2xl overflow-hidden border-2 border-primary shadow-2xl shadow-primary/20 bg-black">
+                <div className="relative w-full h-full">
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover"
+                    loop
+                    playsInline
+                    muted
+                    data-testid="video-hero"
+                  >
+                    <source src={bananaVideo} type="video/mp4" />
+                  </video>
+                  
+                  {!isPlaying && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                       <button
-                        onClick={() => setIsPlaying(true)}
+                        onClick={handlePlayVideo}
                         className="group relative"
                         data-testid="button-play-hero-video"
                       >
                         <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all" />
                         <div className="relative w-24 h-24 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-primary/50">
-                          <Play className="w-10 h-10 text-primary-foreground ml-1" fill="currentColor" />
+                          <PlayIcon className="w-10 h-10 text-primary-foreground ml-1" fill="currentColor" />
                         </div>
                       </button>
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div className="text-center space-y-4 -mt-40">
-                          <p className="text-3xl font-display font-bold">Watch Demo</p>
-                          <p className="text-foreground/60">See transformations in action</p>
-                        </div>
-                      </div>
                     </div>
-                  ) : (
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                      title="BananaCam Demo"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      data-testid="video-hero-demo"
-                    />
                   )}
                 </div>
               </div>
