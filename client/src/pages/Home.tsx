@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import FeaturesSection from "@/components/FeaturesSection";
 import StyleGallery from "@/components/StyleGallery";
 import AppShowcase from "@/components/AppShowcase";
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <BeforeAfterSlider />
         <StyleGallery />
         <FeaturesSection />
         <AppShowcase />
