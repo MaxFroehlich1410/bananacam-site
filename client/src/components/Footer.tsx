@@ -71,9 +71,9 @@ export default function Footer() {
             © 2025 BananaCam. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-foreground/50">
-            <a href="#" className="hover:text-foreground transition-colors" data-testid="link-privacy">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors" data-testid="link-terms">Terms of Service</a>
-            <a href="#" className="hover:text-foreground transition-colors" data-testid="link-support">Support</a>
+            <a href="/privacy-policy" className="hover:text-foreground transition-colors" data-testid="link-privacy">Privacy Policy</a>
+            <a href="/terms-of-service" className="hover:text-foreground transition-colors" data-testid="link-terms">Terms of Service</a>
+            <a href="/support" className="hover:text-foreground transition-colors" data-testid="link-support">Support</a>
           </div>
         </div>
       </div>

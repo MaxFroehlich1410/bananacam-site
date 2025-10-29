@@ -1,18 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Apple, Play as PlayIcon, Sparkles } from "lucide-react";
-import { useRef, useState } from "react";
-import bananaVideo from "@assets/BananaCam_1_1760813309089.mp4";
+import heroImage from "@assets/freepik__realistic-selfie-of-a-gen-z-girl-with-tatoos__52551_1760812162754.jpeg";
 
 export default function HeroSection() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handlePlayVideo = () => {
-    setIsPlaying(true);
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -58,36 +48,15 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative" data-testid="hero-video-showcase">
+          <div className="relative" data-testid="hero-image-showcase">
             <div className="relative max-w-2xl mx-auto">
               <div className="aspect-[9/16] rounded-2xl overflow-hidden border-2 border-primary shadow-2xl shadow-primary/20 bg-black">
-                <div className="relative w-full h-full">
-                  <video
-                    ref={videoRef}
-                    className="w-full h-full object-cover"
-                    loop
-                    playsInline
-                    muted
-                    data-testid="video-hero"
-                  >
-                    <source src={bananaVideo} type="video/mp4" />
-                  </video>
-                  
-                  {!isPlaying && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                      <button
-                        onClick={handlePlayVideo}
-                        className="group relative"
-                        data-testid="button-play-hero-video"
-                      >
-                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all" />
-                        <div className="relative w-24 h-24 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-primary/50">
-                          <PlayIcon className="w-10 h-10 text-primary-foreground ml-1" fill="currentColor" />
-                        </div>
-                      </button>
-                    </div>
-                  )}
-                </div>
+                <img
+                  src={heroImage}
+                  alt="BananaCam app in action - AI photo transformations"
+                  className="w-full h-full object-cover"
+                  data-testid="hero-image"
+                />
               </div>
             </div>
           </div>
