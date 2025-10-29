@@ -1,17 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Apple, Play } from "lucide-react";
+import { Apple } from "lucide-react";
 
 interface DownloadButtonProps {
-  platform: "ios" | "android";
   size?: "default" | "lg";
   variant?: "default" | "outline";
 }
 
-export default function DownloadButton({ platform, size = "default", variant = "default" }: DownloadButtonProps) {
-  const isIOS = platform === "ios";
-  
+export default function DownloadButton({ size = "default", variant = "default" }: DownloadButtonProps) {
   const handleDownload = () => {
-    console.log(`Download ${platform} clicked`);
+    console.log(`Download iOS clicked`);
   };
 
   return (
@@ -19,13 +16,13 @@ export default function DownloadButton({ platform, size = "default", variant = "
       size={size}
       variant={variant}
       onClick={handleDownload}
-      data-testid={`button-download-${platform}`}
+      data-testid="button-download-ios"
       className={`${size === "lg" ? "text-lg px-8 py-6" : ""} gap-2`}
     >
-      {isIOS ? <Apple className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+      <Apple className="w-5 h-5" />
       <div className="flex flex-col items-start">
         <span className="text-xs opacity-80">Download on</span>
-        <span className="font-semibold">{isIOS ? "App Store" : "Google Play"}</span>
+        <span className="font-semibold">App Store</span>
       </div>
     </Button>
   );

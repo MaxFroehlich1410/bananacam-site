@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Apple, Play } from "lucide-react";
+import { Apple } from "lucide-react";
 
 export default function CTASection() {
   return (
@@ -13,7 +13,7 @@ export default function CTASection() {
         </h2>
         
         <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto" data-testid="text-cta-subtitle">
-          Join 500,000+ users creating insane photos with AI. Download now and unleash your inner banana!
+          Join to create insane photos with AI. Download now and unleash your inner banana!
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -24,17 +24,10 @@ export default function CTASection() {
               <span className="font-semibold">App Store</span>
             </div>
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 gap-2" data-testid="button-cta-android">
-            <Play className="w-5 h-5" />
-            <div className="flex flex-col items-start">
-              <span className="text-xs opacity-80">Get it on</span>
-              <span className="font-semibold">Google Play</span>
-            </div>
-          </Button>
         </div>
 
         <p className="text-sm text-foreground/50" data-testid="text-platforms">
-          Available on iOS & Android
+          Available on iOS
         </p>
       </div>
     </section>

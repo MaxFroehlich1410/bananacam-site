@@ -1,12 +1,12 @@
-import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
-import { SiApple, SiGoogleplay } from "react-icons/si";
+import { Instagram } from "lucide-react";
+import { SiApple } from "react-icons/si";
 import logoImage from "@assets/freepik__logo-for-banana-cam-but-make-it-look-professional__52540_1760812162759.png";
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-card/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img src={logoImage} alt="BananaCam" className="h-8 w-auto" />
@@ -19,35 +19,37 @@ export default function Footer() {
               Transform your photos with AI-powered styles. Photorealistic and instant.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 rounded-md bg-secondary/50 flex items-center justify-center hover-elevate" data-testid="link-facebook">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-md bg-secondary/50 flex items-center justify-center hover-elevate" data-testid="link-twitter">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 rounded-md bg-secondary/50 flex items-center justify-center hover-elevate" data-testid="link-instagram">
+              <a
+                href="#"
+                className="w-9 h-9 rounded-md bg-secondary/50 flex items-center justify-center hover-elevate"
+                data-testid="link-instagram"
+              >
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4" data-testid="heading-product">Product</h3>
+            <h3 className="font-semibold mb-4" data-testid="heading-support">Support</h3>
             <ul className="space-y-2 text-sm text-foreground/60">
-              <li><a href="#features" className="hover:text-foreground transition-colors" data-testid="link-features-footer">Features</a></li>
-              <li><a href="#styles" className="hover:text-foreground transition-colors" data-testid="link-styles-footer">Styles</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors" data-testid="link-pricing">Pricing</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors" data-testid="link-faq">FAQ</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4" data-testid="heading-company">Company</h3>
-            <ul className="space-y-2 text-sm text-foreground/60">
-              <li><a href="#" className="hover:text-foreground transition-colors" data-testid="link-about">About</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors" data-testid="link-blog">Blog</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors" data-testid="link-careers">Careers</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors" data-testid="link-contact">Contact</a></li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-faq"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-contact"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -57,10 +59,6 @@ export default function Footer() {
               <a href="#" className="flex items-center gap-2 text-sm hover:text-foreground transition-colors" data-testid="link-ios-footer">
                 <SiApple className="w-5 h-5" />
                 <span>iOS App</span>
-              </a>
-              <a href="#" className="flex items-center gap-2 text-sm hover:text-foreground transition-colors" data-testid="link-android-footer">
-                <SiGoogleplay className="w-5 h-5" />
-                <span>Android App</span>
               </a>
             </div>
           </div>

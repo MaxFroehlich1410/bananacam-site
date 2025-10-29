@@ -54,7 +54,7 @@ export default function Support() {
               <div className="p-6 rounded-lg border border-border bg-card">
                 <h3 className="text-xl font-semibold mb-2">Is the app free to use?</h3>
                 <p className="text-foreground/80">
-                  BananaCam offers both free and premium features. Basic transformations are available for free, with additional styles and features available through in-app purchases.
+                  BananaCam offers three free pictures. Afterwards you have 3 different subscription options to choose from.
                 </p>
               </div>
             </div>
