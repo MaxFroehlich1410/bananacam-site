@@ -1,9 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy static site to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -36,6 +36,23 @@ jobs:
           GITHUB_PAGES: true
           GITHUB_PAGES_BASE: /bananacam-site/
       
+      - name: Verify build output
+        run: |
+          if [ ! -f "docs/index.html" ]; then
+            echo "❌ index.html not found in docs/"
+            exit 1
+          fi
+          if [ ! -f "docs/404.html" ]; then
+            echo "❌ 404.html not found in docs/"
+            exit 1
+          fi
+          if [ ! -f "docs/.nojekyll" ]; then
+            echo "⚠️  .nojekyll not found, creating it..."
+            touch docs/.nojekyll
+          fi
+          echo "✓ Build output verified:"
+          ls -la docs/ | head -10
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
@@ -45,13 +62,12 @@ jobs:
           path: ./docs
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
