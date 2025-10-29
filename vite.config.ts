@@ -27,7 +27,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
-  base: process.env.GITHUB_PAGES ? (process.env.GITHUB_PAGES_BASE || '/BananaCamLanding/') : '/',
+  base: process.env.GITHUB_PAGES ? (process.env.GITHUB_PAGES_BASE || '/bananacam-site/') : '/',
   build: {
     outDir: path.resolve(import.meta.dirname, process.env.GITHUB_PAGES ? "docs" : "dist/public"),
     emptyOutDir: true,

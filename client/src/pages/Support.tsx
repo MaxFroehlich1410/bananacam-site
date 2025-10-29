@@ -12,6 +12,81 @@ export default function Support() {
             Questions or Feedback? Write us at <a href="mailto:maxfroehlich@gmx.net" className="text-primary hover:underline">maxfroehlich@gmx.net</a>.
           </p>
 
+          <section id="account-billing" className="space-y-6 mb-16">
+            <h2 className="text-3xl font-bold mb-8">Account & Billing</h2>
+            
+            <div className="space-y-4">
+              <div className="p-6 rounded-lg border border-border bg-card">
+                <h3 className="text-xl font-semibold mb-4">How to Restore Your Purchases</h3>
+                
+                <p className="text-foreground/80 mb-4">
+                  If you've previously purchased a BananaCam subscription (Lite, Standard, or Pro) and need to restore it—for example, after reinstalling the app or switching devices—follow these steps:
+                </p>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Step 1: Open Settings</h4>
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80 ml-4">
+                      <li>Launch the BananaCam app</li>
+                      <li>Tap the gear icon (⚙️) in the top-right corner of the main screen</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Step 2: Restore Your Purchases</h4>
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80 ml-4">
+                      <li>Scroll to the "Purchases" section</li>
+                      <li>Tap the "Restore Purchases" button</li>
+                      <li>The app will verify your subscription with Apple using the Apple ID you used to purchase it</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Step 3: Wait for Confirmation</h4>
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80 ml-4">
+                      <li>Your subscription status will be restored automatically if you're signed in with the same Apple ID that was used for the original purchase</li>
+                      <li>Your subscription tier (Lite, Standard, or Pro) and remaining monthly credits will be restored</li>
+                      <li>You should see your subscription active again within a few seconds</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Important Notes:</h4>
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80 ml-4">
+                      <li>You must be signed in to the same Apple ID that was used to purchase your subscription</li>
+                      <li>If you're switching to a new device, make sure you're logged into the same Apple ID on both devices</li>
+                      <li>Restoring purchases only works for active subscriptions or subscriptions that have been purchased in the past (if they're still valid)</li>
+                      <li>If you have an active subscription but it's not restoring, ensure you're using the same Apple ID account</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Troubleshooting:</h4>
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80 ml-4">
+                      <li>If the restore fails, try signing out and back into your Apple ID in your device Settings</li>
+                      <li>Make sure you have an active internet connection</li>
+                      <li>If problems persist, contact us at <a href="mailto:maxfroehlich@gmx.net" className="text-primary hover:underline">maxfroehlich@gmx.net</a> and include the email address associated with your Apple ID account</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Alternative Method:</h4>
+                    <p className="text-foreground/80">
+                      You can also restore purchases from the paywall screen. When the paywall appears, look for a "Restore" button at the bottom of the paywall.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-3">Need More Help?</h4>
+                    <p className="text-foreground/80">
+                      If you continue to experience issues restoring your subscription, please reach out to our support team at <a href="mailto:maxfroehlich@gmx.net" className="text-primary hover:underline">maxfroehlich@gmx.net</a>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section id="faq" className="space-y-6">
             <h2 className="text-3xl font-bold mb-8">FAQ</h2>
             

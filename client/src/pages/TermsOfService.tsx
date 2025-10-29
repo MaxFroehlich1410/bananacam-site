@@ -105,7 +105,7 @@ export default function TermsOfService() {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <p className="text-foreground/80 mt-2">
-                Email: legal@bananacam.app<br />
+                Email: maxfroehlich@gmx.net<br />
                 Website: <a href="/support" className="text-primary hover:underline">Support Page</a>
               </p>
             </section>

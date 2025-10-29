@@ -34,7 +34,16 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-foreground/60">
               <li>
                 <a
-                  href="#"
+                  href="/support#account-billing"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-restore-purchase"
+                >
+                  Restore Purchase
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/support#faq"
                   className="hover:text-foreground transition-colors"
                   data-testid="link-faq"
                 >
@@ -43,7 +52,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/support"
                   className="hover:text-foreground transition-colors"
                   data-testid="link-contact"
                 >

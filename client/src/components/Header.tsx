@@ -10,22 +10,22 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-3" data-testid="logo-container">
+          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity" data-testid="logo-container">
             <img src={logoImage} alt="BananaCam" className="h-10 w-auto" />
             <span className="font-display font-bold text-xl">
               <span className="text-primary">Banana</span>
               <span className="text-muted-foreground">Cam</span>
             </span>
-          </div>
+          </a>
 
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#features" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-features">
+            <a href="/#features" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-features">
               Features
             </a>
-            <a href="#styles" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-styles">
+            <a href="/#styles" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-styles">
               Styles
             </a>
-            <a href="#download" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-download">
+            <a href="/#download" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors" data-testid="link-download">
               Download
             </a>
           </nav>
@@ -48,9 +48,9 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border" data-testid="mobile-menu">
             <nav className="flex flex-col gap-4">
-              <a href="#features" className="text-sm font-medium" data-testid="mobile-link-features">Features</a>
-              <a href="#styles" className="text-sm font-medium" data-testid="mobile-link-styles">Styles</a>
-              <a href="#download" className="text-sm font-medium" data-testid="mobile-link-download">Download</a>
+              <a href="/#features" className="text-sm font-medium" data-testid="mobile-link-features">Features</a>
+              <a href="/#styles" className="text-sm font-medium" data-testid="mobile-link-styles">Styles</a>
+              <a href="/#download" className="text-sm font-medium" data-testid="mobile-link-download">Download</a>
               <Button variant="default" className="w-full" data-testid="mobile-button-download">Download App</Button>
             </nav>
           </div>
