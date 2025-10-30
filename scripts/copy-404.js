@@ -1,10 +1,13 @@
 import { copyFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 
-const docsPath = resolve(import.meta.dirname, '..', 'docs');
+const rootPath = resolve(import.meta.dirname, '..');
+const docsPath = resolve(rootPath, 'docs');
 const indexPath = resolve(docsPath, 'index.html');
 const notFoundPath = resolve(docsPath, '404.html');
 const nojekyllPath = resolve(docsPath, '.nojekyll');
+const cnameSourcePath = resolve(rootPath, 'CNAME');
+const cnameDestPath = resolve(docsPath, 'CNAME');
 
 try {
   // Ensure docs directory exists
@@ -20,6 +23,14 @@ try {
   } else {
     console.error('✗ index.html not found in docs directory');
     process.exit(1);
+  }
+
+  // Copy CNAME file to docs folder for custom domain support
+  if (existsSync(cnameSourcePath)) {
+    copyFileSync(cnameSourcePath, cnameDestPath);
+    console.log('✓ Copied CNAME file to docs folder for custom domain');
+  } else {
+    console.warn('⚠️  CNAME file not found in root - custom domain may not work');
   }
 
   // Create .nojekyll to disable Jekyll processing
