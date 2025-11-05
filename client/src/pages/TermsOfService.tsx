@@ -45,7 +45,7 @@ export default function TermsOfService() {
                 <li><strong>BananaCam Pro Monthly</strong> – 1 month for $9.99 USD per month.</li>
                 <li><strong>BananaCam Lite Annual</strong> – 1 year for $19.99 USD per year.</li>
                 <li><strong>BananaCam Standard Annual</strong> – 1 year for $49.99 USD per year.</li>
-                <li><strong>BananaCam Pro Annual</strong> – 1 year for $9.99 USD per year.</li>
+                <li><strong>BananaCam Pro Annual</strong> – 1 year for $99.99 USD per year.</li>
               </ul>
 
               <h3 className="text-xl font-semibold mb-2 mt-4">3.2 Auto-Renewal & Billing</h3>
@@ -145,7 +145,14 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4">12. Contact Information</h2>
+              <h2 className="text-2xl font-semibold mb-4">12. Apple Standard EULA</h2>
+              <p className="text-foreground/80">
+                If you access BananaCam through the Apple App Store, your use of the app is also governed by Apple’s Licensed Application End User License Agreement (“Apple Standard EULA”). Please review the Apple Standard EULA at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>. In the event of a conflict between these Terms and the Apple Standard EULA, the Apple Standard EULA will apply to the extent required by Apple.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">13. Contact Information</h2>
               <p className="text-foreground/80">
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
